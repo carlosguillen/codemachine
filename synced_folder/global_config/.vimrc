@@ -21,7 +21,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 set number
-set ts=2 sts=2 sw=2 expandtab
+set ts=4 sts=4 sw=4 expandtab
 set visualbell
 set splitright
 set hlsearch
@@ -40,7 +40,7 @@ set spell spelllang=en_us
 syntax enable
 set background=dark
 " might need
-" let g:solarized_termcolors=16
+let g:solarized_termcolors=256
 silent! colorscheme solarized
 
 "=========================
@@ -133,3 +133,4 @@ if has('autocmd')
   au! BufWritePost .vimrc nested source %
 endif
 
+autocmd VimEnter * if !argc() | NERDTree | endif
